@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: rahulciscoapp
+  name: rahulciscoapp
+  namespace: rahul-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rahulciscoapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: rahulciscoapp
+    spec:
+      containers:
+      - image: rahulchanda/rahulfrontend:appv05
+        name: rahulfrontend
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
